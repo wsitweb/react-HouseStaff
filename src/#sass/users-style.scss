@@ -1,0 +1,87 @@
+.users{
+    border: 1px solid #fff;
+    padding: 20px;
+    margin: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    transition: all 1s;
+    .user{
+        margin: 1%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 30px;
+        border: 1px solid #fff;
+        max-width: 48%;
+        flex: 1 1 auto;
+        background-color: #3e9ba1;
+        position: relative;
+        form{
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background-color: #0b20229c;
+            backdrop-filter: blur(5px);
+            &>*{
+                height: 30px;
+                width: 60%;
+            }
+            div{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        &__firstName{
+        }
+        &__lastName{
+        }
+        &__info{
+        }
+        &__icon{
+            object-fit: cover;
+            width: 30%;
+            height: fit-content;
+            margin: 50px auto;
+            transition: 0.5s;
+            &:hover{
+                scale: 1.05;
+            }
+        }
+        &__edit{
+            padding: 20px 10px 0 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            z-index: 1000;
+            &>*{
+                width: 50px;
+                height: auto;
+                transition: .3s;
+                border: 1px solid #fff;
+                padding: 3px;
+                &:hover{
+                    scale: 1.1;
+                }
+            }
+        }
+        .info{
+            &__age{
+                b{
+                    font-weight: 500;
+                }
+                font-size: 30px;
+                font-weight: 300;
+            }
+            &__bio{
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+    }
+}
